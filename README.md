@@ -7,7 +7,7 @@ It is meant to be shared by direct link (job applications); search engines are a
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Generated web edition with inline case studies. Midnight styles live in tokens.css. |
+| `index.html` | Generated web edition with inline case studies. Dusk styles live in tokens.css. |
 | `Michal_Stawarz_Portfolio_Case_Studies_EN.pdf` | The 16-page case-study portfolio. Generated, do not edit by hand. |
 | `cover.png` | First page of the PDF as an image. The site uses mobile-work.webp for its hero and social preview. |
 | `robots.txt`, `.nojekyll` | Crawler hint and Pages setting. Leave as they are. |

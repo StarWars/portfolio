@@ -1,15 +1,16 @@
-/* Hallmark · theme: Midnight (by request) · genre: atmospheric · redesign: full · surface: absolute · posture: committed · hero: poster · nav: chapter links · footer: colophon · draw: 0135a1 · signature: three shipped apps from the portfolio cover */
+/* Hallmark · theme: Dusk (by request) · genre: modern-minimal · redesign: full · surface: absolute · posture: committed · hero: poster · nav: chapter links · footer: colophon · draw: 0135a1 · dusk: ridge/periwinkle-apricot/glass · signature: full-color product artwork over a dusk landscape */
 /* Critique: the cover artwork gives the portfolio a visual identity while the project list stays concise. */
 :root {
- --paper:oklch(14% .048 264);--well:oklch(18.5% .052 264);--ink:oklch(95% .016 250);--muted:oklch(73% .04 256);--line:oklch(29% .058 264);--accent:oklch(80% .11 230);--focus:oklch(84% .12 228);--dark:oklch(16% .05 264);
- --font:"Mona Sans",system-ui,sans-serif;--wrap:70rem;--gap:clamp(1.25rem,4vw,4rem)
+ --paper:oklch(20% .015 268);--well:oklch(25% .018 268);--ink:oklch(96% .006 75);--muted:oklch(76% .018 262);--line:oklch(36% .016 266);--accent:oklch(80% .10 274);--focus:oklch(86% .09 274);--dark:oklch(19% .035 274);
+ --apricot:oklch(85% .095 62);--bone:oklch(95% .012 75);--day:oklch(23% .022 268);--day-muted:oklch(34% .022 266);--fog:rgb(250 242 233 / .94);--clear:transparent;--glass:rgb(40 37 49 / .63);--glass-line:rgb(255 255 255 / .24);
+ --font:"Wix Madefor Text",system-ui,sans-serif;--display:"Wix Madefor Display",system-ui,sans-serif;--wrap:70rem;--gap:clamp(1.25rem,4vw,4rem)
 }
 *{box-sizing:border-box}
 html,body{overflow-x:clip}
 body{margin:0;background:var(--paper);color:var(--ink);font:400 1rem/1.6 var(--font)}
 header,main,footer{width:min(calc(100% - 2.5rem),var(--wrap));margin-inline:auto}
 h1,h2,h3,p,figure{margin:0}
-h1,h2{font-weight:300;font-stretch:125%;letter-spacing:-.025em;line-height:1.04;overflow-wrap:break-word;min-width:0;text-wrap:balance}
+h1,h2{font-family:var(--display);font-weight:500;letter-spacing:-.025em;line-height:1.04;overflow-wrap:break-word;min-width:0;text-wrap:balance}
 h1{font-size:clamp(3rem,6.5vw,6.25rem)}h2{font-size:clamp(2rem,3.8vw,3.5rem);margin-bottom:2rem}
 h3{font-size:1.2rem;font-weight:500;line-height:1.35}
 a{color:inherit;text-decoration-thickness:1px;text-underline-offset:.25em}
@@ -20,7 +21,7 @@ nav a{font-size:.92rem;text-decoration:none}.identity{margin-right:auto;font-wei
 .hero p{max-width:44ch;color:var(--muted);margin:1.4rem 0 1.8rem}
 .primary{display:inline-block;background:var(--accent);color:var(--dark);padding:.75rem 1.15rem;text-decoration:none;font-weight:500}.primary:hover{color:var(--dark);background:var(--focus)}
 small,figcaption{font-size:.875rem;color:var(--muted)}.hero small{margin-left:1rem}
-figure{padding:1.2rem;background:var(--well)}figure img{display:block;width:100%;max-height:23rem;object-fit:contain;filter:grayscale(1);mix-blend-mode:luminosity}figcaption{margin-top:.6rem}
+figure{padding:1.2rem;background:var(--well)}figure img{display:block;width:100%;max-height:23rem;object-fit:contain;filter:none}figcaption{margin-top:.6rem}
 main>section+section{border-top:1px solid var(--line);padding-block:clamp(2.5rem,5vw,5rem)}
 .chapters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--gap)}
 .chapters p,.apps p,footer p{color:var(--muted);margin-top:.65rem}
@@ -52,3 +53,10 @@ blockquote{margin:1.5rem 0;padding:1.25rem 1.6rem;border-inline-start:2px solid 
 .catalog{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 1.6rem}
 @media(max-width:800px){.reader{display:block}.reader aside{position:sticky;top:0;background:var(--paper);padding:.45rem 0;border-bottom:1px solid var(--line);z-index:2}.rail{display:none}aside details{display:block}summary{cursor:pointer;padding:.4rem}summary:focus-visible{outline:2px solid var(--focus)}aside details ul{max-height:55vh;overflow:auto;padding:0 .5rem}aside details a{padding:.4rem} [id]{scroll-margin-top:4rem}.facts>div,.catalog{grid-template-columns:minmax(0,1fr)}.facts>div{gap:.25rem}.biek-screens figure{flex:0 1 calc(33% - .6rem)}.gallery img{max-height:15rem;max-width:100%}}
 .measurements{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;margin:0 0 2rem}.measurements div{border-top:1px solid var(--line);padding:.8rem 0}.measurements dt{color:var(--accent);font-size:1.25rem}.measurements dd{font-size:.9rem}@media(max-width:900px){.measurements{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.hero{position:relative;isolation:isolate;padding:clamp(1.35rem,4vw,3.5rem);margin-block:1rem 2.5rem;border-radius:18px;color:var(--day);background:linear-gradient(95deg,var(--fog) 20%,var(--clear) 88%),url("projects/dusk-landscape.webp") center 55% / cover}
+.hero h1{font-size:clamp(2.65rem,5.7vw,5.6rem)}.hero p{color:var(--day-muted)}.hero figure{background:var(--glass);border:1px solid var(--glass-line);border-radius:18px;padding:1rem;backdrop-filter:blur(12px)}.hero figcaption{color:var(--bone)}
+.primary,.contact-float{border-radius:999px}.contact-float{position:fixed;right:max(1rem,env(safe-area-inset-right));bottom:max(1rem,env(safe-area-inset-bottom));z-index:4;background:var(--accent);color:var(--dark);font-weight:600;text-decoration:none;padding:.78rem 1.35rem;box-shadow:0 4px 14px var(--glass)}.contact-float:hover{background:var(--focus);color:var(--dark)}
+.measurements dt,.results dt{color:var(--apricot)}.diagram{border-radius:14px;background:var(--bone);color:var(--day)}.platforms>div{border-color:var(--day-muted)}
+.care-gallery>div{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}.care-gallery a{display:block}.care-gallery img{display:block;width:100%;height:auto;max-height:none}.care-gallery{border-radius:12px}footer{padding-bottom:6rem}
+@media(max-width:720px){.hero{background:linear-gradient(175deg,var(--fog) 34%,var(--clear) 90%),url("projects/dusk-landscape.webp") center / cover}.care-gallery>div{grid-template-columns:repeat(2,minmax(0,1fr))}}
