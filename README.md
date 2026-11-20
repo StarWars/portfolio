@@ -7,9 +7,9 @@ It is meant to be shared by direct link (job applications); search engines are a
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | Portfolio page and links. Midnight styles live in tokens.css. Edit it directly. |
+| `index.html` | Generated web edition with inline case studies. Midnight styles live in tokens.css. |
 | `Michal_Stawarz_Portfolio_Case_Studies_EN.pdf` | The 16-page case-study portfolio. Generated, do not edit by hand. |
-| `cover.png` | First page of the PDF as an image (page preview and link preview). |
+| `cover.png` | First page of the PDF as an image. The site uses mobile-work.webp for its hero and social preview. |
 | `robots.txt`, `.nojekyll` | Crawler hint and Pages setting. Leave as they are. |
 
 ## How it is maintained
@@ -18,10 +18,10 @@ This repository is a published copy. The source of truth is a private career kno
 (`ms-career-knowledge-base`, folder `output/portfolio-site/`, notes in `notes/job-search/public-portfolio.md`):
 
 - The PDF is generated from that knowledge base with `scripts/portfolio/build_case_study_portfolio.py --public`.
-- `scripts/portfolio/publish_public_site.sh` rebuilds the PDF and cover, checks them and pushes here
+- `scripts/portfolio/publish_public_site.sh` rebuilds the HTML, project images, PDF and cover, checks them and pushes here
   (it needs `gh` logged in as `StarWars`).
 
-To change the page text, edit `index.html` in the private project (or here, then copy it back).
+The HTML builder is `scripts/portfolio/build_portfolio_page.py`. Edit the page structure in `scripts/portfolio/portfolio_page.html` and the shared project records in the PDF builder.
 To change the case studies, change the knowledge base or the build script, then run the publish script.
 
 ## Public-version rules
