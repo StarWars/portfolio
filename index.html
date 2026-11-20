@@ -4,73 +4,37 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
-<title>Michał Stawarz — Mobile Portfolio</title>
-<meta name="description" content="Mobile apps built and led by Michał Stawarz: Doktor.se, BIEK, iTaxi, IKO and more. Case studies, App Store links and contact.">
-<meta property="og:title" content="Michał Stawarz — Mobile Portfolio">
-<meta property="og:description" content="BIEK, Doktor.se, iTaxi and IKO. Mobile case studies with links to the App Store and Google Play.">
+<title>Michał Stawarz | Mobile engineering portfolio</title>
+<meta name="description" content="Mobile engineering and leadership case studies from Doktor.se, BIEK, Doktr, iTaxi, IKO and LE34.">
 <meta property="og:image" content="cover.png">
-<style>
-:root{--bg:#f6f8f9;--card:#fff;--text:#16212b;--muted:#566570;--accent:#176572;--line:#d9e1e5}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1a22;--card:#16232d;--text:#e8eef2;--muted:#9fb0ba;--accent:#6fd0d8;--line:#27394a}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
-main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
-h1{font-size:2rem;margin:0 0 4px}
-.role{color:var(--accent);font-weight:600;margin:0 0 16px}
-p{margin:0 0 16px}
-.cover{display:block;width:100%;height:auto;border-radius:10px;border:1px solid var(--line);margin:24px 0}
-.btn{display:inline-block;background:var(--accent);color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:600}
-@media (prefers-color-scheme:dark){.btn{color:#0f1a22}}
-h2{font-size:1.1rem;margin:36px 0 12px}
-ul{list-style:none;padding:0;margin:0;display:grid;gap:10px}
-li{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
-li strong{display:block}
-li span{color:var(--muted);font-size:.92rem}
-a{color:var(--accent)}
-footer{margin-top:40px;color:var(--muted);font-size:.85rem}
-.biek-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:16px 0}
-.biek-gallery img{display:block;width:100%;height:auto;border-radius:8px}
-@media (max-width:600px){.biek-gallery{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px}.biek-gallery a{flex:0 0 45%;scroll-snap-align:start}}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mona+Sans:wdth,wght@100,400;100,500;125,300&amp;display=swap">
+<link rel="stylesheet" href="tokens.css">
 </head>
 <body>
-<main>
-<h1>Michał Stawarz</h1>
-<p class="role">Engineering Manager &amp; Expert Mobile Developer</p>
-<p>12 years of hands-on mobile development. I build and lead the apps behind healthcare, retail, mobility and banking, from 0-to-1 products to platforms with 1M+ registered users per mobile platform.</p>
-<section aria-labelledby="biek-title">
-<h2 id="biek-title">BIEK · Grocery delivery for Biedronka</h2>
-<p>BIEK is the grocery-delivery app for Biedronka, Poland’s largest retailer. Shoppers can reorder groceries, choose a delivery window and track their order.</p>
-<p>I helped win the tender, then built and led the core mobile team. With fellow engineers, I co-created a Kotlin Multiplatform architecture with shared business logic and native iOS and Android interfaces. I defined the API contracts that let us build and test shopping flows for months before backend implementation began.</p>
-<p>My engagement ran from August 2024 to March 2026. BIEK launched nationally in November 2026.</p>
-<p><a href="https://apps.apple.com/pl/app/biek-biedronka-express/id6761813987">BIEK on the App Store</a> · <a href="https://play.google.com/store/apps/details?id=pl.biek.app">BIEK on Google Play</a></p>
-<div class="biek-gallery">
-<a href="biek/1.webp"><img src="biek/1.webp" alt="BIEK home screen with grocery search and repeat purchases" width="720" height="1560"></a>
-<a href="biek/2.webp"><img src="biek/2.webp" alt="Order tracking with a map and delivery confirmation" width="720" height="1560"></a>
-<a href="biek/3.webp"><img src="biek/3.webp" alt="Delivery day and time selection" width="720" height="1560"></a>
-<a href="biek/4.webp"><img src="biek/4.webp" alt="Buy again grocery catalogue" width="720" height="1560"></a>
-<a href="biek/5.webp"><img src="biek/5.webp" alt="Moto-Moto in-app game" width="720" height="1560"></a>
-</div>
+<header><nav aria-label="Main navigation"><a class="identity" href="#top">Michał Stawarz</a><a href="#work">Case studies</a><a href="#apps">Live apps</a><a href="#contact">Contact</a></nav></header>
+<main id="top">
+<section class="hero">
+<div><h1>Mobile engineering portfolio</h1>
+<p>Twelve years building mobile apps, including nearly five leading engineering teams.</p>
+<a class="primary" href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf">Open the portfolio PDF</a><small>16 pages</small></div>
+<figure><img src="mobile-work.webp" alt="App Store artwork for iTaxi, Doktor.se and IKO from the portfolio cover"><figcaption>iTaxi, Doktor.se and IKO</figcaption></figure>
 </section>
-<p><a class="btn" rel="nofollow" href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf">Open the case-study portfolio (PDF, 15 pages)</a></p>
-<a rel="nofollow" href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf"><img class="cover" src="cover.png" alt="Portfolio cover: Michał Stawarz, with store screenshots of Doktor.se, iTaxi and IKO"></a>
-
-<h2>Apps you can open on your phone</h2>
-<ul>
-<li><strong><a href="https://apps.apple.com/se/app/id1193214096">Doktor.se</a></strong><span>Healthcare. 4.8 stars from 114k App Store ratings. I build iOS hands-on and, as App Lead, own its mobile decisions.</span></li>
-<li><strong><a href="https://apps.apple.com/pl/app/itaxi-the-taxi-app/id505936790">iTaxi</a></strong><span>Mobility. Led iOS delivery of a legacy-app redesign.</span></li>
-<li><strong><a href="https://apps.apple.com/pl/app/iko-pko-bank-polski/id597657968">IKO, PKO Bank Polski</a></strong><span>Banking. Onboarding, transfers and payments features, 2020–2021.</span></li>
-</ul>
-
-<h2>Also in the PDF</h2>
-<ul>
-<li><strong>Doktr (Proximus)</strong><span>Customer-specific end-to-end encryption in a healthcare chat.</span></li>
-<li><strong>LE34 / GeoNote</strong><span>40+ white-label apps, plus games and earlier work.</span></li>
-</ul>
-
-<h2>Contact</h2>
-<p><a href="https://www.linkedin.com/in/michal-stawarz">LinkedIn</a> · <a href="https://github.com/StarWars">GitHub</a><br>Warsaw, Poland</p>
-<footer>App Store screenshots and product images belong to their publishers. Current store images may show later versions than the releases I worked on.</footer>
+<section id="work"><h2>Engineering case studies</h2>
+<div class="chapters">
+<article><h3><a href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf#page=4">Healthcare platforms</a></h3><p>At Doktor.se I lead the mobile organisation alongside Consultation &amp; Treatment. At Doktr I coordinated encrypted messaging between patients and doctors through production release.</p></article>
+<article><h3><a href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf#page=8">Mobility and fieldwork</a></h3><p>I led iTaxi’s iOS redesign and helped build LE34’s mobile department, where five white-label foundations supported more than 40 fieldwork apps.</p></article>
+<article><h3><a href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf#page=11">macOS build costs</a></h3><p>I replaced a $1,700-a-month macOS build service with self-hosted runners, cutting infrastructure costs by approximately 99%.</p></article>
+</div></section>
+<section id="apps"><h2>Apps you can open on your phone</h2>
+<ul class="apps">
+<li id="biek-title"><h3>BIEK</h3><p>Grocery delivery for Biedronka, Poland’s largest retailer. I helped win the tender, built and led the core mobile team, and co-created the architecture.</p><div><a href="https://apps.apple.com/pl/app/biek-biedronka-express/id6761813987">App Store</a><a href="https://play.google.com/store/apps/details?id=pl.biek.app">Google Play</a><a href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf#page=6">PDF case study</a></div></li>
+<li><h3>Doktor.se</h3><p>Patient care on mobile. I develop iOS features and guide mobile architecture as App Lead.</p><div><a href="https://apps.apple.com/se/app/id1193214096">App Store</a></div></li>
+<li><h3>iTaxi</h3><p>Ride booking in Poland. I led iOS delivery for the redesign of the existing app.</p><div><a href="https://apps.apple.com/pl/app/itaxi-the-taxi-app/id505936790">App Store</a></div></li>
+<li><h3>IKO</h3><p>Mobile banking for PKO Bank Polski. I worked on iOS onboarding, transfers and payments.</p><div><a href="https://apps.apple.com/pl/app/iko-pko-bank-polski/id597657968">App Store</a></div></li>
+</ul></section>
+<section class="archive"><h2>Inside the portfolio</h2>
+<p>My earlier work spans an Apple TV app with an iPhone controller, iPhone games and an augmented reality app for the POLIN Museum.</p>
+<div><a href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf#page=13">Earlier projects</a><a href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf#page=14">Recommendations</a><a href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf#page=15">Full project index</a></div></section>
 </main>
-</body>
-</html>
+<footer id="contact"><div><h2>Contact</h2><p>Michał Stawarz, Warsaw</p></div><div><a href="https://www.linkedin.com/in/michal-stawarz">LinkedIn</a><a href="https://github.com/StarWars">GitHub</a></div><small>Store artwork belongs to its publishers and may show later releases.</small></footer>
+</body></html>

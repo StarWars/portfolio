@@ -7,8 +7,8 @@ It is meant to be shared by direct link (job applications); search engines are a
 
 | File | Purpose |
 | --- | --- |
-| `index.html` | The whole page: text, App Store links and styles. Edit it directly. |
-| `Michal_Stawarz_Portfolio_Case_Studies_EN.pdf` | The 15-page case-study portfolio. Generated, do not edit by hand. |
+| `index.html` | Portfolio page and links. Midnight styles live in tokens.css. Edit it directly. |
+| `Michal_Stawarz_Portfolio_Case_Studies_EN.pdf` | The 16-page case-study portfolio. Generated, do not edit by hand. |
 | `cover.png` | First page of the PDF as an image (page preview and link preview). |
 | `robots.txt`, `.nojekyll` | Crawler hint and Pages setting. Leave as they are. |
 
