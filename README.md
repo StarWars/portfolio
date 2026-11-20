@@ -27,6 +27,6 @@ To change the case studies, change the knowledge base or the build script, then 
 ## Public-version rules
 
 - No phone number and no email address, in the page or in the PDF.
-- The retail client is not named ("one of Poland's biggest retailers"); unreleased product details stay out.
+- BIEK is public. Its case study covers the national launch after the mobile engagement ended.
 - Store screenshots belong to their publishers.
 - The private version of the PDF (with phone and email) is never published here.

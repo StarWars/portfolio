@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
 <title>Michał Stawarz — Mobile Portfolio</title>
-<meta name="description" content="Mobile apps built and led by Michał Stawarz: Doktor.se, a new app for one of Poland’s biggest retailers, iTaxi, IKO and more. Case studies, App Store links and contact.">
+<meta name="description" content="Mobile apps built and led by Michał Stawarz: Doktor.se, BIEK, iTaxi, IKO and more. Case studies, App Store links and contact.">
 <meta property="og:title" content="Michał Stawarz — Mobile Portfolio">
-<meta property="og:description" content="Case studies and App Store links: healthcare, retail, mobility and banking apps.">
+<meta property="og:description" content="BIEK, Doktor.se, iTaxi and IKO. Mobile case studies with links to the App Store and Google Play.">
 <meta property="og:image" content="cover.png">
 <style>
 :root{--bg:#f6f8f9;--card:#fff;--text:#16212b;--muted:#566570;--accent:#176572;--line:#d9e1e5}
@@ -28,6 +28,9 @@ li strong{display:block}
 li span{color:var(--muted);font-size:.92rem}
 a{color:var(--accent)}
 footer{margin-top:40px;color:var(--muted);font-size:.85rem}
+.biek-gallery{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:16px 0}
+.biek-gallery img{display:block;width:100%;height:auto;border-radius:8px}
+@media (max-width:600px){.biek-gallery{display:flex;overflow-x:auto;scroll-snap-type:x proximity;padding-bottom:8px}.biek-gallery a{flex:0 0 45%;scroll-snap-align:start}}
 </style>
 </head>
 <body>
@@ -35,6 +38,20 @@ footer{margin-top:40px;color:var(--muted);font-size:.85rem}
 <h1>Michał Stawarz</h1>
 <p class="role">Engineering Manager &amp; Expert Mobile Developer</p>
 <p>12 years of hands-on mobile development. I build and lead the apps behind healthcare, retail, mobility and banking, from 0-to-1 products to platforms with 1M+ registered users per mobile platform.</p>
+<section aria-labelledby="biek-title">
+<h2 id="biek-title">BIEK · Grocery delivery for Biedronka</h2>
+<p>BIEK is the grocery-delivery app for Biedronka, Poland’s largest retailer. Shoppers can reorder groceries, choose a delivery window and track their order.</p>
+<p>I helped win the tender, then built and led the core mobile team. With fellow engineers, I co-created a Kotlin Multiplatform architecture with shared business logic and native iOS and Android interfaces. I defined the API contracts that let us build and test shopping flows for months before backend implementation began.</p>
+<p>My engagement ran from August 2024 to March 2026. BIEK launched nationally in November 2026.</p>
+<p><a href="https://apps.apple.com/pl/app/biek-biedronka-express/id6761813987">BIEK on the App Store</a> · <a href="https://play.google.com/store/apps/details?id=pl.biek.app">BIEK on Google Play</a></p>
+<div class="biek-gallery">
+<a href="biek/1.webp"><img src="biek/1.webp" alt="BIEK home screen with grocery search and repeat purchases" width="720" height="1560"></a>
+<a href="biek/2.webp"><img src="biek/2.webp" alt="Order tracking with a map and delivery confirmation" width="720" height="1560"></a>
+<a href="biek/3.webp"><img src="biek/3.webp" alt="Delivery day and time selection" width="720" height="1560"></a>
+<a href="biek/4.webp"><img src="biek/4.webp" alt="Buy again grocery catalogue" width="720" height="1560"></a>
+<a href="biek/5.webp"><img src="biek/5.webp" alt="Moto-Moto in-app game" width="720" height="1560"></a>
+</div>
+</section>
 <p><a class="btn" rel="nofollow" href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf">Open the case-study portfolio (PDF, 15 pages)</a></p>
 <a rel="nofollow" href="Michal_Stawarz_Portfolio_Case_Studies_EN.pdf"><img class="cover" src="cover.png" alt="Portfolio cover: Michał Stawarz, with store screenshots of Doktor.se, iTaxi and IKO"></a>
 
@@ -47,7 +64,6 @@ footer{margin-top:40px;color:var(--muted);font-size:.85rem}
 
 <h2>Also in the PDF</h2>
 <ul>
-<li><strong>A new app for one of Poland’s biggest retailers</strong><span>0-to-1 from RFP to a Kotlin Multiplatform architecture with native UI. Not yet public.</span></li>
 <li><strong>Doktr (Proximus)</strong><span>Customer-specific end-to-end encryption in a healthcare chat.</span></li>
 <li><strong>LE34 / GeoNote</strong><span>40+ white-label apps, plus games and earlier work.</span></li>
 </ul>
