@@ -145,3 +145,80 @@ blockquote{margin:1.5rem 0;padding:1.25rem 1.6rem;border-inline-start:2px solid 
 /* BIEK screens: equal columns, top-aligned, so captions of different lengths never shift the images */
 .biek-screens{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));align-items:start}.biek-screens figure{min-width:0}
 @media(max-width:800px){.biek-screens{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Dusk v2 (22 Nov 2026): sticky glass header, full-bleed drifting hero, ambient glows, glass cards,
+   a career timeline that grows in when seen, and a photo closing band that invites a LinkedIn message. */
+:root{--nav-h:4.5rem;--glass-hi:inset 0 1px 0 rgb(255 255 255 / .07);--lift:0 22px 44px -26px rgb(0 0 0 / .7)}
+header.nav{position:fixed;inset:0 0 auto;z-index:20;width:100%;height:var(--nav-h);margin:0;color:var(--day);transition:background-color .25s ease-out,color .25s ease-out,box-shadow .25s ease-out}
+header.nav nav{width:min(calc(100% - 2.5rem),var(--wrap));height:100%;min-height:0;margin-inline:auto;border:0;flex-wrap:nowrap}
+header.nav nav a{opacity:.86;transition:opacity .15s}header.nav nav a:hover{opacity:1;color:inherit}
+header.nav .identity{font-family:var(--display);font-size:1.08rem;opacity:1;flex-basis:auto}
+header.nav .identity::before{content:"";display:inline-block;width:.7rem;height:.7rem;margin-right:.55rem;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--apricot),var(--accent) 70%);vertical-align:.02em}
+header.nav.is-solid{color:var(--ink);background:color-mix(in oklab,var(--paper) 72%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);box-shadow:0 1px 0 rgb(255 255 255 / .07)}
+header.nav .nav-cta{opacity:1;padding:.55rem 1.1rem;border-radius:999px;background:var(--accent);color:var(--dark);font-weight:600;box-shadow:inset 0 0 0 1px rgb(255 255 255 / .35),0 6px 18px -8px rgb(120 130 255 / .7)}
+header.nav .nav-cta:hover{background:var(--focus);color:var(--dark)}
+[id]{scroll-margin-top:calc(var(--nav-h) + 1rem)}
+
+/* Hero: full-bleed photo that drifts slowly, fog on the left, fading into the page below */
+main>.hero{width:auto;margin:0 calc(50% - 50vw) 1.5rem;border-radius:0;overflow:hidden;background:none;min-height:min(100svh,58rem);
+ padding:calc(var(--nav-h) + clamp(2rem,5vw,4.5rem)) max(1.25rem,calc((100vw - var(--wrap)) / 2)) clamp(4rem,8vw,7rem)}
+main>.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url("projects/dusk-landscape.webp") center 55% / cover;transform-origin:70% 60%;animation:drift 48s ease-in-out infinite alternate}
+main>.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,transparent 62%,var(--paper) 99%),linear-gradient(95deg,var(--fog) 16%,rgb(250 242 233 / .55) 42%,transparent 72%)}
+@keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1.5%,-1%)}}
+.hero figure{box-shadow:var(--glass-hi),var(--lift)}
+
+/* Ambient glows and glass depth */
+.bodycopy section{position:relative;isolation:isolate}
+#experience::before,#impact::before,#recommendations::before,#index::before{content:"";position:absolute;z-index:-1;width:42rem;height:30rem;pointer-events:none;border-radius:50%;filter:blur(10px)}
+#experience::before{top:-4rem;right:-14rem;background:radial-gradient(closest-side,rgb(160 170 255 / .13),transparent)}
+#impact::before{top:6rem;left:-16rem;background:radial-gradient(closest-side,rgb(255 196 140 / .09),transparent)}
+#recommendations::before{top:-2rem;right:-12rem;background:radial-gradient(closest-side,rgb(160 170 255 / .11),transparent)}
+#index::before{bottom:0;left:-14rem;background:radial-gradient(closest-side,rgb(255 196 140 / .07),transparent)}
+.card,.rec,.career,.results,.legacy,.initiatives,blockquote{border:1px solid rgb(255 255 255 / .06);box-shadow:var(--glass-hi),var(--lift)}
+.card,.rec,.career{background:linear-gradient(165deg,color-mix(in oklab,var(--well) 100%,white 3%),color-mix(in oklab,var(--well) 70%,var(--paper)))}
+.card.lead,.rec:first-child{background:linear-gradient(165deg,color-mix(in oklab,var(--tint) 100%,white 4%),color-mix(in oklab,var(--tint) 75%,var(--paper)))}
+.highlights li{box-shadow:var(--lift)}
+
+/* Career timeline grows in, bar by bar, then the milestones appear */
+.career .bar{transform-origin:left center;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.career.is-waiting .bar{transform:translateY(-50%) scaleX(0)}
+.career .track .dot{transition:opacity .4s ease-out,transform .5s cubic-bezier(.2,.7,.2,1)}
+.career.is-waiting .track .dot{opacity:0;transform:translate(-50%,-50%) scale(.4)}
+.career .bar.lead{box-shadow:0 0 14px -3px rgb(160 170 255 / .8)}
+.career .bar.biek{box-shadow:0 0 14px -3px rgb(255 196 140 / .8)}
+
+/* Closing band: photo, glass card, LinkedIn pill */
+.close-band{position:relative;isolation:isolate;display:grid;align-items:center;min-height:36rem;overflow:hidden;margin-top:1rem}
+.close-band>img{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+.close-band::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,var(--paper) 0%,transparent 28%,transparent 70%,var(--paper) 100%),linear-gradient(to right,color-mix(in oklab,var(--paper) 55%,transparent),transparent 60%)}
+.close-in{width:min(calc(100% - 2.5rem),var(--wrap));margin-inline:auto;padding-block:6rem}
+.book{max-width:33rem;padding:clamp(1.4rem,3vw,2.4rem);border-radius:18px;background:color-mix(in oklab,var(--paper) 62%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);border:1px solid rgb(255 255 255 / .1);box-shadow:var(--glass-hi),var(--lift)}
+.book h2{margin:0 0 .7rem;font-size:clamp(2.2rem,4vw,3.2rem)}
+.book p{color:var(--muted);font-size:1.15rem;line-height:1.5}
+.join{display:flex;align-items:center;gap:.5rem;margin-top:1.6rem;padding:.3rem .3rem .3rem 1.4rem;border-radius:999px;background:rgb(255 255 255 / .06);border:1px solid rgb(255 255 255 / .14);text-decoration:none;color:var(--muted)}
+.join span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.95rem}
+.join b{flex:none;padding:.75rem 1.2rem;border-radius:999px;background:var(--accent);color:var(--dark);font-weight:600;font-size:.95rem;box-shadow:inset 0 0 0 1px rgb(255 255 255 / .35)}
+.join span{color:var(--ink);font-weight:500}.join i{display:inline-block;margin-left:.35rem;font-style:normal;color:var(--accent);transition:transform .2s ease-out}.join:hover i{transform:translateX(4px)}.join:hover{color:var(--ink)}.join:hover b{background:var(--focus)}
+.join em{display:none;font-style:normal}.join:focus-visible{outline:2px solid var(--focus);outline-offset:4px}
+
+/* Footer: brand, links, place, credits */
+footer.foot{display:block;border-top:0;padding:0 0 3rem}
+.foot-base{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:1.2rem 2.5rem;padding-top:2.5rem}
+.foot-base .identity{font-family:var(--display);font-size:1.08rem;text-decoration:none;font-weight:500}
+.foot-base .identity::before{content:"";display:inline-block;width:.7rem;height:.7rem;margin-right:.55rem;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--apricot),var(--accent) 70%)}
+nav.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 1.4rem;min-height:0;border:0}
+.foot-links a,footer .foot-links a+a{margin:0;font-size:.875rem;color:var(--muted);text-decoration:none}.foot-links a:hover{color:var(--ink)}
+.legal{font-size:.875rem;color:var(--muted)}
+footer .credits a+a{margin-left:0}footer .credits{grid-column:1/-1;padding-top:1.2rem;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+
+@media(max-width:800px){.reader aside{top:var(--nav-h)}[id]{scroll-margin-top:calc(var(--nav-h) + 3.5rem)}}
+@media(min-width:801px){.reader aside{top:calc(var(--nav-h) + 1rem);max-height:calc(100vh - var(--nav-h) - 2rem)}}
+@media(max-width:720px){
+ header.nav nav a:not(.identity):not(.nav-cta){display:none}
+ main>.hero{min-height:0;padding-bottom:4rem}
+ main>.hero::after{background:linear-gradient(to bottom,transparent 75%,var(--paper) 99%),linear-gradient(175deg,var(--fog) 38%,rgb(250 242 233 / .45) 62%,transparent 88%)}
+ .close-band{min-height:30rem}.close-in{padding-block:4rem}
+ .foot-base{grid-template-columns:1fr}nav.foot-links{justify-content:flex-start}
+ .join{padding-left:1rem}.join span{display:none}.join em{display:inline}.join{padding:.3rem;justify-content:stretch}.join b{flex:1;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){main>.hero::before{animation:none}.career .bar,.career .track .dot{transition:none}}
