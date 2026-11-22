@@ -149,12 +149,12 @@ blockquote{margin:1.5rem 0;padding:1.25rem 1.6rem;border-inline-start:2px solid 
 /* Dusk v2 (22 Nov 2026): sticky glass header, full-bleed drifting hero, ambient glows, glass cards,
    a career timeline that grows in when seen, and a photo closing band that invites a LinkedIn message. */
 :root{--nav-h:4.5rem;--glass-hi:inset 0 1px 0 rgb(255 255 255 / .07);--lift:0 22px 44px -26px rgb(0 0 0 / .7)}
-header.nav{position:fixed;inset:0 0 auto;z-index:20;width:100%;height:var(--nav-h);margin:0;color:var(--day);transition:background-color .25s ease-out,color .25s ease-out,box-shadow .25s ease-out}
+header.nav{position:fixed;inset:0 0 auto;z-index:20;width:100%;height:var(--nav-h);margin:0;color:var(--ink);background:color-mix(in oklab,var(--paper) 72%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);box-shadow:0 1px 0 rgb(255 255 255 / .07);transition:background-color .25s ease-out,color .25s ease-out,box-shadow .25s ease-out}
 header.nav nav{width:min(calc(100% - 2.5rem),var(--wrap));height:100%;min-height:0;margin-inline:auto;border:0;flex-wrap:nowrap}
 header.nav nav a{opacity:.86;transition:opacity .15s}header.nav nav a:hover{opacity:1;color:inherit}
 header.nav .identity{font-family:var(--display);font-size:1.08rem;opacity:1;flex-basis:auto}
 header.nav .identity::before{content:"";display:inline-block;width:.7rem;height:.7rem;margin-right:.55rem;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--apricot),var(--accent) 70%);vertical-align:.02em}
-header.nav.is-solid{color:var(--ink);background:color-mix(in oklab,var(--paper) 72%,transparent);-webkit-backdrop-filter:blur(18px) saturate(1.3);backdrop-filter:blur(18px) saturate(1.3);box-shadow:0 1px 0 rgb(255 255 255 / .07)}
+header.nav.is-top{color:var(--day);background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
 header.nav .nav-cta{opacity:1;padding:.55rem 1.1rem;border-radius:999px;background:var(--accent);color:var(--dark);font-weight:600;box-shadow:inset 0 0 0 1px rgb(255 255 255 / .35),0 6px 18px -8px rgb(120 130 255 / .7)}
 header.nav .nav-cta:hover{background:var(--focus);color:var(--dark)}
 [id]{scroll-margin-top:calc(var(--nav-h) + 1rem)}
