@@ -1,7 +1,7 @@
-# Mobile portfolio of Michał Stawarz
+# Product & engineering portfolio of Michał Stawarz
 
 Public portfolio site, served by GitHub Pages at <https://starwars.github.io/portfolio/>.
-It is meant to be shared by direct link (job applications); search engines are asked not to index it.
+It is public and indexable by search engines (since 22 November 2026), positioned for "Michał Stawarz, Engineering Manager".
 
 ## Files
 
@@ -10,7 +10,7 @@ It is meant to be shared by direct link (job applications); search engines are a
 | `index.html` | Generated web edition with inline case studies. Dusk styles live in tokens.css. |
 | `Michal_Stawarz_Portfolio_Case_Studies_EN.pdf` | The 16-page case-study portfolio. Generated, do not edit by hand. |
 | `cover.png` | First page of the PDF as an image. The site uses mobile-work.webp for its hero and social preview. |
-| `robots.txt`, `.nojekyll` | Crawler hint and Pages setting. Leave as they are. |
+| `robots.txt`, `sitemap.xml`, `.nojekyll` | Crawler permissions, sitemap and Pages setting. |
 
 ## How it is maintained
 
